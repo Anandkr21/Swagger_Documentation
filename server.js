@@ -9,6 +9,12 @@ const app = express()
 
 app.use(express.json())
 
+app.get('/', (req,res) =>{
+    res.status(200).send({
+        msg: "Welcome to Swagger Documentation."
+    })
+})
+
 const options = {
     definition: {
         openapi: "3.0.0",
